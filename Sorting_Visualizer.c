@@ -1,10 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
+#include <time.h> 
 
 #define MAX 20
 int arr[MAX];
 int i,j,size,m,n,k;
+  
+void delay(float number_of_seconds) 
+{ 
+    // Converting time into milli_seconds 
+    float milli_seconds = 1000 * number_of_seconds; 
+  
+    // Storing start time 
+    clock_t start_time = clock(); 
+  
+    // looping till required time is not achieved 
+    while (clock() < start_time + milli_seconds) 
+        ; 
+} 
 
 void generate()
 {
@@ -29,6 +43,7 @@ void show()
     {
         for(j=0; j<100; j++) {}
     }*/
+    delay(0.1);
     system("cls");
     printf("\n\n");
     for(i=0; i<size; i++)
@@ -37,7 +52,7 @@ void show()
         printf("\t\t");
         for(j=0; j<arr[i]; j++)
         {
-            printf("_");
+            printf("#");
         }
         printf("\n");
     }
@@ -124,6 +139,7 @@ void main()
         printf("Invalid choice.");
         break;
     }
-    printf("\nPress any key to continue...\n");
+    printf("\n\n");
     getchar();
+    system("pause");
 }
