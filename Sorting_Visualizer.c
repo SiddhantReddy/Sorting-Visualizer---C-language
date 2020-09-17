@@ -22,7 +22,6 @@ void choices()
     printf(" 1 : Selection Sort\n");
     printf(" 2 : Bubble Sort\n");
     printf(" 3 : Insertion Sort\n");
-    printf(" 4 : Exit\n");
 }
 void show()
 {
@@ -125,4 +124,6 @@ void main()
         printf("Invalid choice.");
         break;
     }
+    printf("\nPress any key to continue...\n");
+    getchar();
 }
